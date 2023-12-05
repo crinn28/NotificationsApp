@@ -1,0 +1,6 @@
+<div class="buttons">
+    <div class="category-button" *ngFor="let category of categories">  
+        <button mat-raised-button color="primary" (click)="onClick(category.id)">{{category.name}}</button>
+    </div>
+    <button class="category-button" mat-raised-button color="primary" (click)="onClick('')">All</button>
+</div>

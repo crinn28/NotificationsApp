@@ -1,0 +1,35 @@
+<div class="title">Edit the announcement</div>
+<form class="add-announcement-form">
+    <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Add a title" [(ngModel)]="title" name="titleInput" required="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Author</mat-label>
+        <input matInput placeholder="Add a author" [(ngModel)]="author" name="authorInput" required="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Add a message" [(ngModel)]="message" name="messageInput" required="text"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Image url</mat-label>
+        <input matInput placeholder="" [(ngModel)]="imageUrl" name="imageUrlInput">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>{{cat}}</mat-label>
+        <mat-select [(value)]="selectedCategory">
+          <mat-option *ngFor="let category of categories" [value]="category.id">
+            {{category.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-button color="primary" (click)="editAnouncement()" routerLink="home">Edit</button>
+      <button mat-button color="primary" routerLink="home">Cancel</button>
+</form>
+

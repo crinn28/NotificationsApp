@@ -1,0 +1,17 @@
+.add-announcement-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    vertical-align: middle;
+}
+
+.category{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.title{
+    font-weight: bold;
+    font-size:20px;
+}

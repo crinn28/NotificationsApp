@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Backend</name>
+    </assembly>
+    <members>
+        <member name="M:Backend.Controllers.CategoriesController.Get">
+            <summary>
+            Get the whole collection of categories
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.CategoriesController.GetCategory(System.String)">
+            <summary>
+            Get the element with the given id
+            </summary>
+        </member>
+        <member name="M:Backend.Controllers.CategoriesController.CreateCategory(Backend.Models.Category)">
+            <summary>
+            Create a new category and add it to the category list
+            </summary>
+        </member>
+        <member name="M:Backend.Controllers.CategoriesController.DeleteCategory(System.String)">
+            <summary>
+            Delete the category with the given id  
+            </summary>
+        </member>
+    </members>
+</doc>

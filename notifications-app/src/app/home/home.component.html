@@ -1,0 +1,15 @@
+<p style="color:red;">
+    {{notificationMessage}}
+  </p>
+<div class="app-container">
+    <app-categories (selectedCategoryEmitter)="changeCategory($event)"></app-categories>
+
+    <div *ngFor="let announcement of filtredAnnouncements | async" class="announcements">
+        <app-announcement [announce]="announcement"></app-announcement>
+    </div>
+<div>
+<div class="button-container">
+    <button class="add-announcement-card" mat-icon-button [routerLink]="'/add'">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

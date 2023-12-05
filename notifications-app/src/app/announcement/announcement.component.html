@@ -1,0 +1,25 @@
+<div class="announcement-container">
+    <div class="title">
+        <p>
+        {{announcement.title}}
+    </p>
+    </div>
+
+    <div class="message">
+        <p>
+        {{announcement.message}}
+    </p>
+    </div>
+        
+    <div class="author">
+        <p>
+        {{announcement.author | preposition }}
+    </p>
+    <div class="button-container">
+        <button class="add-announcement-card" mat-icon-button [routerLink]="['/edit',announcement.id]">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button class="add-announcement-card" (click)="deleteAnnouncement(announcement)" [routerLink]="'/home'" mat-icon-button>
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
